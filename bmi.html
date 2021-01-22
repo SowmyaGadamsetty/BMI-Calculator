@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  	<style type="text/css">
+  		#actual{
+  			background-color: #EAAC4B;
+  			height: 500px;
+  			width: 370px;
+  			position: relative;
+  			top:20px;
+  			left:600px;
+  		}
+
+  		body{
+  			background-color: #90E1DF;
+  		}
+
+
+
+  	</style>
+  </head>
+  <body>
+
+    <div id="actual">
+      <form onsubmit="return calcBMI();">
+        <h1>BMI CALCULATOR</h1>
+  System:
+  <label>
+    <input type="radio" id="bmi-metric" name="bmi-measure" onchange="measureBMI()" checked/> Metric
+  </label>
+  <label>
+    <input type="radio" id="bmi-imperial" name="bmi-measure" onchange="measureBMI()"/> Imperial
+  </label>
+  <br><br>
+
+  Weight:
+  <input id="bmi-weight" type="number" min="1" max="635" required/>
+  <span id="bmi-weight-unit">KG</span>
+  <br><br>
+
+  Height:
+  <input id="bmi-height" type="number" min="54" max="272" required/>
+  <span id="bmi-height-unit">CM</span>
+  <br><br>
+
+  <input type="submit" value="Calculate BMI"/>
+  <div id="bmi-results"></div>
+</form></div>
+  </body>
+
+  <script src="bmi.js">
+
+  </script>
+</html>
